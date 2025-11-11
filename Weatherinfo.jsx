@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 import SunnyIcon from '@mui/icons-material/Sunny';
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import './Weatherinfo.css';
 export default function WeatherInfo({info}){
     const NORMAl_URL = "https://images.unsplash.com/photo-1689742854945-c44649d9d8b9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGR1c3R5JTIwd2VhdGhlciUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=900";
@@ -24,7 +23,7 @@ export default function WeatherInfo({info}){
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {info.City} {info.Temp >=30 ? <SunnyIcon/> : info.Temp<=10 ? <AcUnitIcon/> : info.Humidity>=80 ? <ThunderstormIcon/> : <FavoriteIcon/>}
+          {info.City} {info.Temp >=30 ? <SunnyIcon/> : info.Temp<=10 ? <AcUnitIcon/> : info.Humidity>=80 ? <ThunderstormIcon/> : []}
         </Typography>
         <Typography variant="body2" color = 'text.secondary' component={"span"} >
           <p>Temperature = {info.Temp}&deg;C</p>
