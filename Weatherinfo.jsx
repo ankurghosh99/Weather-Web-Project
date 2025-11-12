@@ -18,16 +18,16 @@ export default function WeatherInfo({info}){
       <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image={info.Temp>=30 ? HOT_URL : info.Temp<=10 ? COOL_URL : info.Humidity>=80 ? RAIN_URL : NORMAl_URL}
+        image={info.Temp>=30 ? HOT_URL : info.Temp<=10 ? COOL_URL : info.Humidity>=98 ? RAIN_URL : NORMAl_URL}
         title="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {info.City} {info.Temp >=30 ? <SunnyIcon/> : info.Temp<=10 ? <AcUnitIcon/> : info.Humidity>=80 ? <ThunderstormIcon/> : []}
+          {info.City} {info.Temp >=30 ? <SunnyIcon/> : info.Temp<=10 ? <AcUnitIcon/> : info.Humidity>=98 ? <ThunderstormIcon/> : []}
         </Typography>
         <Typography variant="body2" color = 'text.secondary' component={"span"} >
           <p>Temperature = {info.Temp}&deg;C</p>
-          <p>Humidity = {info.Humidity}</p>
+          <p>Humidity = {info.Humidity}%</p>
           <p>MinTemp = {info.TempMin}&deg;C</p>
           <p>MaxTemp = {info.TempMax}&deg;C</p>
           <p>The weather can be described as {info.Weather} and feels like {info.FeelsLike}&deg;C</p>
